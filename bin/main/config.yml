@@ -1,0 +1,89 @@
+# RandomFlowerPlugin Configuration
+# 
+# Available attributes for flowers:
+# - material: Minecraft material name (required)
+# - name: Display name with color codes (&a, &b, etc.)
+# - lore: List of description lines
+# - glowing: true/false - adds enchantment glow effect
+# - amount: Number of items (1-64)
+# - enchantments: Map of enchantment names to levels
+# - unbreakable: true/false - makes item unbreakable
+# - custom-model-data: Number for resource pack models
+# - item-flags: List of flags to hide (HIDE_ENCHANTS, HIDE_ATTRIBUTES, etc.)
+#
+# Color codes: &0-&9, &a-&f
+# Format codes: &l(bold), &o(italic), &n(underline), &m(strikethrough), &k(magic), &r(reset)
+
+flowers:
+  # Simple flower
+  - material: "DANDELION"
+    name: "&eSunny Dandelion"
+    
+  # Flower with lore
+  - material: "POPPY"
+    name: "&cCrimson Poppy"
+    lore:
+      - "&7A vibrant red flower"
+      - "&7Symbolizes love and passion"
+    
+  # Glowing flower
+  - material: "BLUE_ORCHID"
+    name: "&9&lMystical Blue Orchid"
+    lore:
+      - "&bA rare magical flower"
+      - "&7Glows with ethereal light"
+    glowing: true
+    
+  # Enchanted flower
+  - material: "ALLIUM"
+    name: "&d&lEnchanted Purple Allium"
+    lore:
+      - "&5A flower blessed by magic"
+      - "&7Enhanced with ancient spells"
+      - "&8Rarity: &6Legendary"
+    enchantments:
+      UNBREAKING: 3
+      MENDING: 1
+    item-flags:
+      - "HIDE_ENCHANTS"
+    
+  # Unbreakable flower
+  - material: "AZURE_BLUET"
+    name: "&b&lEternal Azure Bluet"
+    lore:
+      - "&7This flower never wilts"
+      - "&7Preserved by ancient magic"
+    unbreakable: true
+    glowing: true
+    
+  # Multiple flowers
+  - material: "RED_TULIP"
+    name: "&cBouquet of Red Tulips"
+    lore:
+      - "&7A beautiful bouquet"
+    amount: 3
+    
+  # Custom model data example (for resource packs)
+  - material: "ORANGE_TULIP"
+    name: "&6Golden Tulip"
+    lore:
+      - "&7A special variant"
+      - "&7Requires custom resource pack"
+    custom-model-data: 1001
+    glowing: true
+    
+  # Simple flowers
+  - material: "WHITE_TULIP"
+    name: "&fPure White Tulip"
+    
+  - material: "PINK_TULIP"
+    name: "&dSweet Pink Tulip"
+    
+  - material: "OXEYE_DAISY"
+    name: "&fInnocent Oxeye Daisy"
+    lore:
+      - "&7A symbol of purity"
+
+# Plugin settings
+defaultEnabled: true
+showMessages: false

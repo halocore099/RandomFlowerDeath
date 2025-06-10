@@ -1,0 +1,17 @@
+name: RandomFlowerPlugin
+version: 1.0
+main: com.example.randomFlower.RandomFlowerPlugin
+api-version: 1.21
+commands:
+  randomflowerondeath:
+    description: Toggle random flower drops on death or reload config
+    usage: /randomflowerondeath <true|false|reload>
+    permission: randomflower.toggle
+    permission-message: "You don't have permission to use this command."
+permissions:
+  randomflower.toggle:
+    description: Allows players to toggle the random flower on death feature.
+    default: true
+  randomflower.reload:
+    description: Allows reloading the plugin configuration.
+    default: op
